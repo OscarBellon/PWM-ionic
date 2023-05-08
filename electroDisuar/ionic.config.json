@@ -1,0 +1,7 @@
+{
+  "name": "electroDisuar",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
