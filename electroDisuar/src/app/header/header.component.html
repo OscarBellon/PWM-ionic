@@ -1,0 +1,33 @@
+<nav class="topBar">
+  <div class="marco">
+    <img src="assets/logoNuevo.png" alt="logo" class="logo">
+  </div>
+  <div class="contenedorLinks">
+    <ul class="topBarLinks">
+      <li><a routerLink="/home" routerLinkActive="active-link">Inicio</a></li>
+      <li><a routerLink="/catalogo" routerLinkActive="active-link">Catálogo</a></li>
+      <div class="marco2">
+        <li><a routerLink="/acceder" routerLinkActive="active-link" class="Acceder">Acceder</a></li>
+        <!--<li *ngIf="state"><a (click)="logOut()" routerLink="#" routerLinkActive="active-link" class="Acceder"> {{ dataUser }}</a></li>-->
+      </div>
+    </ul>
+  </div>
+</nav>
+<nav class="topBarMobile">
+  <div class="marco">
+    <img src="assets/logoNuevo.png" alt="logo" class="logo">
+  </div>
+  <div class="marco2Mobile"></div>
+  <div class="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul class="topBarLinksMobile">
+      <li class="link"><a routerLink="/home" routerLinkActive="active-link">Inicio</a></li>
+      <li class="link"><a routerLink="/catalogo" routerLinkActive="active-link">Catálogo</a></li>
+      <li class="AccederMobile"><a routerLink="/acceder" routerLinkActive="active-link" >Acceder</a></li>
+      <!--<li class="AccederMobile" *ngIf="state"><a (click)="logOut()" routerLink="#" routerLinkActive="active-link" > {{ dataUser }}</a></li>-->
+    </ul>
+</div>
+</nav>
