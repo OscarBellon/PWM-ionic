@@ -1,20 +1,36 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<div class="mainContent">
+  <header id="header">
+      <nav>
+        <!--Componente del header--> 
+      </nav>
+    </header>
+    <header>
+      <div class="presentacion">
+        <img src="assets/Banner.PNG" alt="Foto de la tienda" class="foto">
+        <div class="textos">
+          <p class="titulo">ElectroDisuar</p>
+          <p class="subtitulo">Siempre a tu lado, queremos ser la resistencia de tu diodo</p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="contenido">
+        <section class="galeria">
+          <div class="subtitulo1">
+            <p>Productos destacados</p>
+          </div>
+          <article id="carrusel">
+            <!--<app-carrusel [productsFiltered]="todos"></app-carrusel>-->
+          </article>
+        </section>
+        <section class="novedades">
+          <div class="subtitulo2">
+            <p>Novedades</p>
+          </div>
+            <article id="carrusel2">
+              <!--<app-carrusel [productsFiltered]="filtrados"></app-carrusel>-->
+            </article>
+        </section>
+      </section>
+    </main>
   </div>
-</ion-content>
