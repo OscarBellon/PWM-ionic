@@ -1,0 +1,60 @@
+$azul1:#03738c;
+$azul2:#2E4052;
+$gris:#f2f2f2;
+
+.wrapper{
+    height: 215px;
+    width: 129px;
+    background:$gris ;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+img{
+    background-color: white;
+}
+.wrapperProducto{
+    height: 138px;
+    width: 100%;
+    display: block;
+}
+
+.wrapperProducto img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px, 15px, 0px,0px;
+}
+
+.grid-container{
+    margin: 5px;
+}
+.nombreProducto{
+    font-size:small;
+    padding: 0px;
+    margin: 0px;
+}
+.precio{
+    font-size:x-small;
+    margin-top: 0px;
+    padding-bottom: 12px;
+}
+
+.disponibilidad{
+    top:100%;
+    font-size:x-small;
+    display: flex;
+    justify-content: space-between;
+
+}
+.circulo{
+    background: $azul1;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+
+}
