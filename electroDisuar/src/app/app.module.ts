@@ -6,7 +6,9 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+
 import { HeaderComponent } from './header/header.component';
+import { ProfilePage } from './profile/profile.page';
 import {environment} from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 
