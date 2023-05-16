@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HeaderComponent } from './header/header.component';
+import { ProfilePage } from './profile/profile.page';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
