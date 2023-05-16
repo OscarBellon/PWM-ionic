@@ -1,0 +1,29 @@
+
+
+<ion-content [fullscreen]="true">
+  <nav>
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <li id="todos" >Todos</li>
+        <li id="adaptadores">Adaptadores</li>
+        <li id="cableado" >Cableado</li>
+        <li id="detectores" >Detectores</li>
+        <li id="electronica" >Electrónica</li>
+        <li id="iluminacion">Iluminación</li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="contenedorDeProductos">
+    <app-producto></app-producto>
+    <app-producto></app-producto>
+    <app-producto></app-producto>
+    <app-producto></app-producto>
+
+    <!--<app-producto *ngFor="let product of productList" [product]="product"></app-producto>-->
+  </section>
+</ion-content>
