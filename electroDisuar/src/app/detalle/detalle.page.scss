@@ -1,0 +1,121 @@
+$azul1:#03738c;
+$azul2:#2E4052;
+$blanco1:#d9d9d9;
+
+body{
+    background-image: url("/resources/background.jpg");
+    background-size: cover;
+    overflow-y: scroll;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    width: 100%;
+    margin: 0px;
+
+}
+.productoPrincipal h1{
+    font-size: large ;
+}
+.productoPrincipal{
+    width: 49vw;
+    display: grid;
+    height: 60vh;
+    grid-template-columns: 40%, 60%;
+    background:#FFFFFF ;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+aside{
+    grid-column: 2;
+}
+
+.rel{
+    background: $azul2;
+    color: white;
+    padding: 5px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    margin-top: 100px;
+    vertical-align:bottom;
+
+
+}
+
+
+.productoPrincipal img{
+    width: 95%;
+    height: 90%;
+    vertical-align: middle;
+    margin: auto;
+}
+
+.imagenProducto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    grid-column: 1;
+}
+
+#informacion{
+    grid-column: 2;
+    position: relative;
+}
+
+.envoltorio{
+    width: 100%;
+    box-sizing: border-box;
+    height: 30px;
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 20px;
+}
+.fila{
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+.precio{
+    font-size: medium;
+}
+.disponibilidad{
+    font-size: medium;
+    margin-top: 10px;
+    display: flex;
+}
+
+.circulo {
+    background: $azul1;
+    margin-top: 4px;
+    margin-left: 5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+}
+
+@media only screen and (max-width: 950px){
+
+    .productoPrincipal{
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0px;
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+
+    main{
+        box-sizing: border-box;
+        margin-top: 10%;
+        margin-left: 10%;
+        width: 80%;
+        grid-template-columns: 100%;
+    }
+    aside{
+        grid-column: 1;
+    }
+}

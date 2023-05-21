@@ -16,6 +16,8 @@ import { ProductoComponent } from '../producto/producto.component'
     IonicModule,
     CatalogoPageRoutingModule
   ],
-  declarations: [CatalogoPage, ProductoComponent]
+  declarations: [CatalogoPage, ProductoComponent],
+  exports: [ProductoComponent]
 })
 export class CatalogoPageModule {}
+

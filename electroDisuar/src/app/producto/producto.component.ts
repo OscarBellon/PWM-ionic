@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input} from '@angular/core';
+import { Producto } from '../producto'
+import { Router, NavigationExtras } from '@angular/router'
+import {FireStorageService} from '../fire-storage.service'
 @Component({
   selector: 'app-producto',
   templateUrl: './producto.component.html',
@@ -7,8 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductoComponent  implements OnInit {
 
-  constructor() { }
+  @Input() producto!: Producto;
+  rutaImg!: string;
 
-  ngOnInit() {}
+  async image(){
+    this.rutaImg=await this.storage.getProductImageURL(this.producto.rutaImagen);
+  }
+  constructor(private storage: FireStorageService, private router: Router ) { }
 
+  ngOnInit() {
+    this.image()
+  }
+
+  openDetail(){
+    let navExtras: NavigationExtras = {
+      queryParams:{
+        special: JSON.stringify(this.producto)
+      }
+    };
+    this.router.navigate(['/detalle'],navExtras)
+  }
 }

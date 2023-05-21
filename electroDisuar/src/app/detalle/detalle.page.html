@@ -1,0 +1,30 @@
+<article class="productoPrincipal">
+  <div class="imagenProducto">
+    <img src={{rutaImg}}  class="imPro"alt="producto"></div>
+  <section id="informacion">
+
+    <h1 class="nombreProducto">{{producto.nombre}}</h1>
+
+    <div class="descripcion">
+      {{producto.detalle}}
+    </div>
+
+    <div class="envoltorio">
+      <div class="fila">
+        <h2 class="precio">{{producto.precio}} €</h2>
+        <div class="disponibilidad">Disponibilidad
+          <div class="circulo" *ngIf="producto.disponibilidad"> </div>
+          <div class="circulo" *ngIf="!producto.disponibilidad" style="background: lightcoral !important;"> </div>
+        </div>
+
+      </div></div>
+  </section>
+</article>
+<aside>
+  <h2 class="rel">Productos Relacionados</h2>
+  <swiper-container slides-per-view="3" navigation="true">
+    <swiper-slide *ngFor="let producto of productosRelacionados" centered-slides="true">
+      <app-producto [producto]="producto"></app-producto>
+    </swiper-slide>
+  </swiper-container>
+</aside>
