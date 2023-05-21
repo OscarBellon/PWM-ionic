@@ -18,7 +18,15 @@ const routes: Routes = [
   {
     path: 'favourites',
     loadChildren: () => import('./favourites/favourites.module').then( m => m.FavouritesPageModule)
+  },  {
+    path: 'access',
+    loadChildren: () => import('./access/access.module').then( m => m.AccessPageModule)
   },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+
 ];
 
 @NgModule({

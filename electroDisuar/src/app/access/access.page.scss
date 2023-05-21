@@ -1,0 +1,100 @@
+#contTitle{
+    width: 100%;
+    height: auto;
+    background-color: #03738C;
+    padding: 10px;
+}
+#title{
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+
+    margin-bottom: 0px;
+}
+
+#contSubtitle{
+    width: 65%;
+    margin-bottom: 30px;
+    height: auto;
+    background-color: #2E4052;
+    padding: 8px;
+
+}
+
+#subtitle{
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0px;
+}
+
+form{
+    align-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+label{
+    //max-width: 100px;
+    text-align: left;
+    //margin-left: 15%;
+    margin-bottom: 3px;
+}
+
+.inputExtras{
+    display: flex;
+    align-self: center;
+    padding-right: 30px;
+    width: 70%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    max-width: 800px;
+    margin-bottom: 2em;
+    justify-content: center;
+    background-color: #03738C;
+
+    //margin-left: 60px;
+}
+input{
+    width: 100%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    max-width: 800px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #2E4052;
+    color: white;
+    //align-self: center;
+}
+.Campo{
+    width: 70%;
+    max-width: 800px;
+    align-self: center;
+}
+#acceder{
+    width: 100%;
+    max-width: 8em;
+    transform: translate(0%, -15%);
+}
+#registrar{
+    width: 100%;
+    max-width: 8em;
+    transform: translate(0%, -15%);
+}
+
+#botones{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.boton{
+    background-color: #03738C;
+    max-width: 8em;
+    //margin-left: 20%;
+    //margin-right: 20%;
+    align-self: center;
+    border-radius: 5px;
+    //height: 50px;
+}
