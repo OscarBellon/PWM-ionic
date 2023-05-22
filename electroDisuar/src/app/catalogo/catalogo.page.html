@@ -1,0 +1,25 @@
+
+
+<ion-content [fullscreen]="true">
+  <nav>
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <li id="todos" (click)="getProducts()">Todos</li>
+        <li id="adaptadores" (click)="filter('adaptadores')">Adaptadores</li>
+        <li id="cableado" (click)="filter('Cableado')">Cableado</li>
+        <li id="detectores" (click)="filter('Sensores')">Detectores</li>
+        <li id="electronica" (click)="filter('electrónica')">Electrónica</li>
+        <li id="iluminacion" (click)="filter('Iluminación')">Iluminación</li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="contenedorDeProductos">
+    <app-producto *ngFor="let producto of productos" [producto]="producto"></app-producto>
+    <!--<app-producto *ngFor="let product of productList" [product]="product"></app-producto>-->
+  </section>
+</ion-content>

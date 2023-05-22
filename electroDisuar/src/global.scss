@@ -31,12 +31,13 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     background-image: url("assets/Fomdo.jpg");
-    background-size: cover; 
+    background-size: cover;
     min-height: 100%;
 }
 
 html,body{
     height: 100%;
+    color: black;
 }
 main{
     display: list-item;

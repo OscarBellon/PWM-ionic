@@ -1,0 +1,18 @@
+<article class="productoPrincipal">
+  <div class="wrapper">
+    <div class="wrapperProducto">
+      <a (click)="openDetail()">
+        <img src={{rutaImg}} alt="" class="producto">
+      </a>
+    </div>
+    <div class="grid-container">
+      <h2 class="nombreProducto">{{producto.nombre}} ></h2>
+      <h3 class="precio">{{producto.precio}}</h3>
+      <div class="disponibilidad">
+        disponibilidad
+        <div class="circulo" *ngIf="producto.disponibilidad"></div>
+        <div class="circulo" *ngIf="!producto.disponibilidad" style="background: lightcoral !important;"></div>
+      </div>
+    </div>
+  </div>
+</article>
