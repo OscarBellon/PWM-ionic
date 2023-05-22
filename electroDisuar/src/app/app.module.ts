@@ -16,10 +16,8 @@ import { AngularFireStorageModule} from '@angular/fire/compat/storage'
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { firebaseConfig } from 'src/environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+
 
 /*import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';*/
@@ -34,7 +32,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';*/
   AngularFireStorageModule, 
     ReactiveFormsModule, 
     FormsModule,
-    AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

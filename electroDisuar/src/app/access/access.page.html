@@ -1,39 +1,39 @@
 <ion-content>
-  <main class="mainContent">
-    <div id="contTitle">
-      <p id="title">Acceder</p>
-    </div>
-    <div id="contSubtitle">
-      <p id="subtitle">Acceso de usuario</p>
-    </div>
-    <div id="contenedorFormulario">
-      <form [formGroup]="validationFormUser" (ngSubmit)="LoginUser(validationFormUser.value)">
-        <div class="Campo">
-          <label >Correo electrónico:</label>
-        </div>
-        <div class="inputExtras">
-          <input type="email" name="email" formControlName="email" required>
-        </div>
-        <p class="errores">Proporcione una dirección de correo válida.</p>
-        <br>
-        <div class="Campo">
-          <label >Contraseña:</label>
-        </div>
-        <div class="inputExtras">
-          <input type="password" name="password" formControlName="password" required>
-        </div>
-        <p class="errores">La contraseña debe tener más de  caracteres.</p>
-        <br>
-        <div id="botones">
-          <div class="boton">
-            <input id="acceder" type="submit" value="Acceder" >
-          </div>
-          <div class="boton">
-            <button  id="registrar">Registrate</button>
-            <!--<input id="registrar" type="button" value="Registrate">-->
-          </div>
-        </div>
-      </form>
-    </div>
+    <main class="mainContent">
+      <div id="contTitle">
+          <p id="title">Acceder</p>
+      </div>
+      <div id="contSubtitle">
+          <p id="subtitle">Acceso de usuario</p>
+      </div>
+      <div id="contenedorFormulario">
+          <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+              <div class="Campo">
+                  <label for="email">Correo electrónico:</label>
+              </div>
+              <div class="inputExtras">
+                  <input type="email" id="email" name="email" class="form-control" formControlName="email" required>
+              </div>
+              <p class="errores" *ngIf="formLogin.get('email')?.touched && formLogin.get('email')?.invalid">Proporcione una dirección de correo válida.</p>
+              <br>
+              <div class="Campo">
+                  <label for="password">Contraseña:</label>
+              </div>
+              <div class="inputExtras">
+                  <input type="password" id="password" name="password" class="form-control" formControlName="password" required>
+              </div>
+              <p class="errores" *ngIf="formLogin.get('password')?.touched && formLogin.get('password')?.errors?.['minlength']">La contraseña debe tener más de {{ formLogin.get('password')?.errors?.['minlength']?.requiredLength }} caracteres.</p>
+              <br>
+              <div id="botones">
+                  <div class="boton">
+                      <input id="acceder" type="submit" value="Acceder">
+                  </div>
+                  <div class="boton">
+                      <button routerLink="/registro" id="registrar">Registrate</button>
+                      <!--<input id="registrar" type="button" value="Registrate">-->
+                  </div>
+              </div>
+          </form>
+      </div>
   </main>
 </ion-content>

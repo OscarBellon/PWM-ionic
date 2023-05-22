@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-/*import { from } from 'rxjs';
-import { UserService } from '../user.service';
+import { from } from 'rxjs';
+import UserService from '../services/user.services';
 import { Router } from '@angular/router';
-import { HeaderComponent } from '../header/header.component';*/
+import { HeaderComponent } from '../header/header.component';
 
 
 
@@ -14,29 +14,34 @@ import { HeaderComponent } from '../header/header.component';*/
 })
 export class AccessPage implements OnInit{
 
-  validationFormUser!: FormGroup; 
-  constructor(
-    public formbuilder: FormBuilder
-  ){}
+  formLogin: FormGroup;
 
-  ngOnInit(): void {
-    this.validationFormUser = this.formbuilder.group({
-      email: new FormControl('', Validators.compose([
-        Validators.required,
-        Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
-      ])),
-      password: new FormControl('', Validators.compose([
-        Validators.required,
-        Validators.minLength(6)
-      ]))
+  constructor(
+    private userService: UserService,
+    private fb: FormBuilder,
+    private router: Router,
+    
+  ){
+    this.formLogin = this.fb.group({
+      email: new FormControl('',[Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required,Validators.minLength(6)])
     })
   }
 
-  LoginUser(value){
-    console.log("Logueado ^^")
-  }
-  onSubmit(){
+  ngOnInit(): void {
 
+  }
+
+  onSubmit(){
+    this.userService.login(this.formLogin.value)
+      .then(response => {
+        console.log(response);
+        this.userService.activo = true;
+        alert("Acceso completado");
+        this.router.navigate(['/home']);
+      })
+      .catch(error => console.log(error));
+    console.log(this.formLogin.value);
 
   }
 }
