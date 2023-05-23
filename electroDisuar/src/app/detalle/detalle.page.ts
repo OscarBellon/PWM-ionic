@@ -21,6 +21,8 @@ export class DetallePage implements OnInit, OnChanges {
     this.productosRelacionados = await this.firestore.getProductsBySection(section)
   }
 
+
+
   constructor(private route: ActivatedRoute,
    private router: Router,
    private storage: FireStorageService,

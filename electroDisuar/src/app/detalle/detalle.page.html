@@ -22,7 +22,7 @@
 </article>
 <aside>
   <h2 class="rel">Productos Relacionados</h2>
-  <swiper-container slides-per-view="3" navigation="true">
+  <swiper-container slides-per-view="3" pagination="true">
     <swiper-slide *ngFor="let producto of productosRelacionados" centered-slides="true">
       <app-producto [producto]="producto"></app-producto>
     </swiper-slide>

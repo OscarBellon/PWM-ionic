@@ -1,7 +1,7 @@
 <div class="mainContent">
   <header id="header">
       <nav>
-        <!--Componente del header--> 
+        <!--Componente del header-->
       </nav>
     </header>
     <header>
@@ -21,6 +21,11 @@
           </div>
           <article id="carrusel">
             <!--<app-carrusel [productsFiltered]="todos"></app-carrusel>-->
+            <swiper-container slides-per-view="3" pagination="true">
+              <swiper-slide *ngFor="let producto of productosOfertas" centered-slides="true">
+                <app-producto [producto]="producto"></app-producto>
+              </swiper-slide>
+            </swiper-container>
           </article>
         </section>
         <section class="novedades">
@@ -29,6 +34,11 @@
           </div>
             <article id="carrusel2">
               <!--<app-carrusel [productsFiltered]="filtrados"></app-carrusel>-->
+              <swiper-container slides-per-view="3" pagination="true">
+                <swiper-slide *ngFor="let producto of productos" centered-slides="true">
+                  <app-producto [producto]="producto"></app-producto>
+                </swiper-slide>
+              </swiper-container>
             </article>
         </section>
       </section>

@@ -29,7 +29,7 @@ const routes: Routes = [
     loadChildren: () => import('./detalle/detalle.module').then( m => m.DetallePageModule)
   },
   {
-    path: 'access',
+    path: 'acceder',
     loadChildren: () => import('./access/access.module').then( m => m.AccessPageModule)
   },
   {
