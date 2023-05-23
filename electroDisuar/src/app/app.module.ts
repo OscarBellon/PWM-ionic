@@ -19,9 +19,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 
-/*import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from '@angular/fire/auth';*/
-
+/*import { AngularFireModule } from '@angular/fire';*/
+//import { Auth } from '@angular/fire/compat/auth';
+import { UserService } from './services/user.services';
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
   imports: [BrowserModule,
@@ -32,8 +32,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';*/
   AngularFireStorageModule, 
     ReactiveFormsModule, 
     FormsModule,
-    AngularFireAuthModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+    AngularFireAuthModule,],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, UserService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

@@ -15,6 +15,8 @@ import { HeaderComponent } from '../header/header.component';
 export class AccessPage implements OnInit{
 
   formLogin: FormGroup;
+  email: string = '';
+  password: string = '';
 
   constructor(
     private userService: UserService,
@@ -28,12 +30,25 @@ export class AccessPage implements OnInit{
     })
   }
 
+  signUp() {
+    this.userService.SignUp(this.email, this.password);
+    this.email = ''; 
+    this.password = '';
+  }
+  signIn() {
+    this.email = ''; 
+    this.password = '';
+  }
+  signOut() {
+    this.userService.SignOut();
+  }
+
   ngOnInit(): void {
 
   }
 
-  onSubmit(){
-    this.userService.login(this.formLogin.value)
+  /*onSubmit(){
+    /*this.userService.signIn(this.email)
       .then(response => {
         console.log(response);
         this.userService.activo = true;
@@ -43,5 +58,5 @@ export class AccessPage implements OnInit{
       .catch(error => console.log(error));
     console.log(this.formLogin.value);
 
-  }
+  }*/
 }

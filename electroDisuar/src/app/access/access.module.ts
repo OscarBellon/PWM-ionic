@@ -8,7 +8,7 @@ import { AccessPageRoutingModule } from './access-routing.module';
 
 import { AccessPage } from './access.page';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { Auth } from '@angular/fire/auth';
 @NgModule({
   imports: [
     CommonModule,
@@ -17,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AccessPageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [AccessPage]
+  declarations: [AccessPage],
+  providers: [Auth]
 })
 export class AccessPageModule {}
