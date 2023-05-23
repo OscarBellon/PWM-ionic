@@ -19,6 +19,7 @@ export class UserService{
   public activo: Boolean = false;
   public currentUser: any;
   public avs: any;
+  public name: null | string = '';
   public loggedIn = new BehaviorSubject<boolean>(false);
   public condicion = new BehaviorSubject<boolean>(false);
     //userData: Observable<firebase.User | null>;
@@ -26,12 +27,17 @@ export class UserService{
     //this.userData = angularFireAuth.authState;
   }
   /* Sign up */
-  SignUp(email: string, password: string) {
+  SignUp(email: string, password: string, name: string) {
     
     this.angularFireAuth
       .createUserWithEmailAndPassword(email, password)
       .then(res => {
         console.log('Successfully signed up!', res);
+        const user = res.user;
+
+        return user!.updateProfile({
+          displayName: name
+        });
       })
       .catch((error: Error) => {
         console.log('Something is wrong:', error.message);
@@ -47,6 +53,7 @@ export class UserService{
         this.condicion.next(true);
         this.activo=true;
         this.currentUser = email;
+        this.name = res.user!.displayName;
         this.avs="in";
         this.loggedIn.next(true);
         alert("Login completado");

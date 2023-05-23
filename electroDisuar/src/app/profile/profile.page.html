@@ -10,8 +10,12 @@
         <p class="subtitulo1p">Detalles del Usuario</p>
       </article>
       <article class="detalles">
-        <li class="data">Nombre: <p class="username"></p> </li>
-        <li class="data">Correo: <p class="usermail"></p> </li>
+        <div class="bloqueData">
+          <li class="data">Nombre:</li><p class="username"> {{ dataUser }} </p>
+        </div>
+        <div class="bloqueData">
+          <li class="data">Correo: </li> <p class="usermail"> {{ correo }} </p>
+        </div>
       </article>
       <article class="favoritos">
         <button class="favoritosbutton">Articulos favoritos</button>

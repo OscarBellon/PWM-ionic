@@ -10,7 +10,15 @@
     font-weight: bolder;
     font-family: Arial, Arial, Arial;
   }
-  
+  p{
+    margin: 7px;
+  }
+  .bloqueData{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    margin-right: 15px;
+  }
   .subtitulo1{
     background-color: #2E4052;
     color: white;
@@ -31,12 +39,16 @@
   .detalles{
     list-style-type: none;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
   }
 
   .data{
     padding: 5px;
     font-size: 18px;
     font-weight: bold;
+    display: flex;
+    flex-direction: row;
   }
 
   .favoritos{

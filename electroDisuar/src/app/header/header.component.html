@@ -27,9 +27,9 @@
     <ul class="topBarLinksMobile">
       <li class="link"><a routerLink="/home" routerLinkActive="active-link">Inicio</a></li>
       <li class="link"><a routerLink="/catalogo" routerLinkActive="active-link">Catálogo</a></li>
-      <li class="AccederMobile"*ngIf="state === false"><a routerLink="/acceder" routerLinkActive="active-link" >Acceder</a></li>
+      <li class="AccederMobile" *ngIf="state === false"><a routerLink="/acceder" routerLinkActive="active-link" >Acceder</a></li>
       <li class="AccederMobile" *ngIf="state"><a (click)="logOut()" routerLink="#" routerLinkActive="active-link" > {{ dataUser }}</a></li>
-      
+      <li class="AccederMobile" *ngIf="state"><a (click)="logOut()" routerLink="/home" routerLinkActive="active-link" class="Acceder"> LogOut</a></li>
     </ul>
 </div>
 </nav>

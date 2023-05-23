@@ -39,7 +39,7 @@ export class RegisterPage {
       return;
     }
     try{
-      this.userService.SignUp(this.formReg.get('email')?.value, this.formReg.get('password')?.value);
+      this.userService.SignUp(this.formReg.get('email')?.value, this.formReg.get('password')?.value, this.formReg.get('name')?.value);
       alert("Registro completado");
       this.router.navigate(['/acceder']);
     } catch(Error){
