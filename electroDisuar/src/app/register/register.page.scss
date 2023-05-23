@@ -1,0 +1,115 @@
+#contTitle{
+    width: 100%;
+    height: auto;
+    background-color: #03738C;
+    padding: 10px;
+}
+#title{
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+
+    margin-bottom: 0px;
+}
+
+#contSubtitle{
+    width: 65%;
+    margin-bottom: 30px;
+    height: auto;
+    background-color: #2E4052;
+    padding: 8px;
+    
+}
+
+#subtitle{
+    font-size: 26px;
+    font-weight: 600;
+    color: white;
+    margin: 5px;
+}
+
+form{
+    align-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+label{
+    //max-width: 100px;
+    text-align: left;
+    //margin-left: 15%;
+    margin-bottom: 3px;
+}
+
+.inputExtras{
+    display: flex;
+    align-self: center;
+    padding-right: 30px;
+    width: 70%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    max-width: 800px;
+    margin-bottom: 0px;
+    justify-content: center;
+    background-color: #03738C;
+
+    //margin-left: 60px;
+}
+#nombre{
+    width: 100%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    max-width: 800px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #2E4052;
+    color: white;
+    //align-self: center;
+}
+
+.form-control{
+    width: 100%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    max-width: 800px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #2E4052;
+    color: white;
+    //align-self: center;
+}
+
+
+.Campo{
+    font-weight: 400;
+    font-size: 20px;
+    width: 70%;
+    max-width: 800px;
+    padding: 15px;
+    align-self: center;
+}
+#registra{
+    width: 100%;
+    max-width: 8em;
+    background-color: #2E4052;
+    color: white;
+    transform: translate(0%, -15%);
+}
+#boton{
+    background-color: #03738C;
+    max-width: 8em;
+    align-self: center;
+    border-radius: 5px;
+    margin-top: 2em;
+    //height: 50px;
+}
+
+.errores{
+    width: 70%;
+    max-width: 800px;
+    align-self: center;
+    color: rgb(209, 5, 5);
+    margin-bottom: 0px;
+}
