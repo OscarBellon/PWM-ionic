@@ -21,7 +21,7 @@
           </div>
           <article id="carrusel">
             <!--<app-carrusel [productsFiltered]="todos"></app-carrusel>-->
-            <swiper-container slides-per-view="3" pagination="true">
+            <swiper-container slides-per-view="2" pagination="true">
               <swiper-slide *ngFor="let producto of productosOfertas" centered-slides="true">
                 <app-producto [producto]="producto"></app-producto>
               </swiper-slide>
@@ -34,7 +34,7 @@
           </div>
             <article id="carrusel2">
               <!--<app-carrusel [productsFiltered]="filtrados"></app-carrusel>-->
-              <swiper-container slides-per-view="3" pagination="true" class="carrusel2">
+              <swiper-container slides-per-view="2" pagination="true" class="carrusel2">
                 <swiper-slide *ngFor="let producto of productos" centered-slides="true">
                   <app-producto [producto]="producto"></app-producto>
                 </swiper-slide>

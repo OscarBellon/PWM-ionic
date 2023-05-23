@@ -14,6 +14,7 @@ export class FirestoreService {
         .subscribe(productos=>resolve(productos))
       })
     }
+    
     getProductByName(name:String){
       return new Promise<any>((resolve)=>{
         this.db.collection("productos",ref=>
@@ -22,6 +23,7 @@ export class FirestoreService {
         .subscribe(productos=>resolve(productos))
       })
     }
+
     getProductsBySection(section:String){
       return new Promise<any>((resolve)=>{
         this.db.collection("productos", ref=>

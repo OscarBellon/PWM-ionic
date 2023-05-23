@@ -9,6 +9,14 @@
       <article class="subtitulo1">
         <p class="subtitulo1p">Favoritos del Usuario</p>
       </article>
+      <article>
+        <!-- Carrusel!! --> 
+        <swiper-container slides-per-view="2" pagination="true" class="carrusel2">
+          <swiper-slide *ngFor="let producto of productosFavoritos" centered-slides="true">
+            <app-producto [producto]="producto"></app-producto>
+          </swiper-slide>
+        </swiper-container>
+      </article>
     </section>
   </main>
 </body>
