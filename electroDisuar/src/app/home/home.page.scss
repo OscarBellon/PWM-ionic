@@ -6,7 +6,13 @@
   flex-direction: column;
   width: 55%;
 }
-
+main{
+  height:100%;
+}
+.ion-page{
+  height: 100%;
+  overflow-y:scroll;
+}
 .titulo{
   font-size: 50px;
   font-weight: bold;
@@ -33,7 +39,8 @@
 .contenido{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
+  height:100%;
 }
 
 .galeria{
