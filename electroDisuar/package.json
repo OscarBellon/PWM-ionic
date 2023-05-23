@@ -22,7 +22,7 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
-    "@capacitor-community/sqlite": "^4.8.0-1",
+    "@awesome-cordova-plugins/sqlite": "^6.3.0",
     "@ionic/angular": "^7.0.0",
     "@ionic/cordova-builders": "^9.0.0",
     "cordova-android": "10.1.2",
