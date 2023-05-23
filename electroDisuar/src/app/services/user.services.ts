@@ -7,7 +7,7 @@ import { BehaviorSubject } from "rxjs";
 import { AngularFireAuth } from "@angular/fire/compat/auth";
 import firebase from "firebase/compat";
 //import { User } from 'firebase/compat/auth';
-import auth  from 'firebase/compat/app';
+//import auth  from 'firebase/compat/app';
 
 
 @Injectable({
@@ -16,9 +16,9 @@ import auth  from 'firebase/compat/app';
 
 export class UserService{
 
-    userData: Observable<firebase.User | null>;
+    //userData: Observable<firebase.User | null>;
   constructor(private angularFireAuth: AngularFireAuth) {
-    this.userData = angularFireAuth.authState;
+    //this.userData = angularFireAuth.authState;
   }
   /* Sign up */
   SignUp(email: string, password: string) {

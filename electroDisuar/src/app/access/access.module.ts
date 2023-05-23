@@ -8,7 +8,8 @@ import { AccessPageRoutingModule } from './access-routing.module';
 
 import { AccessPage } from './access.page';
 import { ReactiveFormsModule } from '@angular/forms';
-import { Auth } from '@angular/fire/auth';
+import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "@angular/fire/auth";
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,7 +18,6 @@ import { Auth } from '@angular/fire/auth';
     AccessPageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [AccessPage],
-  providers: [Auth]
+  declarations: [AccessPage]
 })
 export class AccessPageModule {}
