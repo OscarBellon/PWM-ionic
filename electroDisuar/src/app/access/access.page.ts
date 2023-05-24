@@ -17,6 +17,7 @@ export class AccessPage implements OnInit{
   formLogin: FormGroup;
   //email: string = '';
   //password: string = '';
+  private state: Boolean = false;
 
   constructor(
     private userService: UserService,
@@ -49,9 +50,17 @@ export class AccessPage implements OnInit{
 
   onSubmit(){
     try{
+      console.log(this.userService.activo);
       this.userService.SignIn(this.formLogin.get('email')?.value, this.formLogin.get('password')?.value);
-      alert("Login completado");
-      this.router.navigate(['/home']);
+      /*this.userService.condicion.subscribe(value => {
+        this.state = this.userService.condicion.getValue();
+      });*/
+      /*if(this.userService.activo === true){
+        this.userService.activo = true;
+        alert("Login completado");
+        this.router.navigate(['/home']);
+      }*/
+      console.log(this.userService.activo);
     } catch(Error){
       console.log(Error);
     }
