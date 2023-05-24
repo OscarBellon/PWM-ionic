@@ -1,9 +1,9 @@
 @media only screen and (min-width:702px){
-  
+
     .topBarMobile{
       display: None;
     }
-  
+
     .topBar{
       background-color: #2E4052;
       width: 100%;
@@ -12,19 +12,19 @@
       justify-content: space-between;
       align-items: center;
     }
-    
+
     .marco{
       background-color: #03738C;
       width: auto;
       height: auto;
       border-radius: 5px;
     }
-    
+
     .logo{
       width: 100%;
       height: 38px;
     }
-  
+
     .topBarLinks{
       display:flex;
       flex-direction: row;
@@ -33,48 +33,48 @@
       margin:auto;
       padding-inline-start: 0;
     }
-    
+
     .topBarLinks li{
       padding: 10px;
       padding-left: 15px;
       margin: 0;
     }
-  
+
     .contenedorLinks{
       display: flex;
       align-content: center;
       justify-content: flex-end
     }
-  
+
     .marco2{
       display: flex;
       background-color: #03738C;
       width: auto;
       height: auto;
     }
-  
+
     .topBarLinks a{
       transition: color 0.5s ease;
     }
-    
+
     .topBarLinks a:link, a:visited, a:active {
       text-decoration: none;
       color: white;
       font-family:Arial, Helvetica, sans-serif;
-    }  
-    
+    }
+
     .topBarLinks a:hover{
       color: lightcoral;
     }
-  
+
 }
-  
+
 @media only screen and (max-width: 702px){
-  
+
     .topBar{
       display: none;
     }
-  
+
     .topBarMobile{
       background-color: #2E4052;
       width: 100%;
@@ -83,27 +83,27 @@
       justify-content: space-between;
       align-items: center;
     }
-    
+
     .marco{
       background-color: #03738C;
       width: auto;
       height: auto;
       border-radius: 5px;
     }
-    
+
     .logo{
       width: 100%;
       height: 38px;
     }
-  
+
     .marco2Mobile{
-      width: 100px; 
+      width: 100px;
       height: 44px;
       position: absolute;
       right: 0;
       background-color: #03738C;
     }
-  
+
     .menuToggle{
       display: block;
       position: relative;
@@ -114,7 +114,7 @@
       -webkit-user-select: none;
       user-select: none;
   }
-  
+
   .menuToggle input{
     display: block;
     width: 40px;
@@ -127,7 +127,7 @@
     z-index: 2;
     -webkit-touch-callout: none;
   }
-  
+
   .menuToggle span{
     display: block;
     left: 80px;
@@ -143,34 +143,34 @@
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
   }
-  
+
   .menuToggle span:first-child{
     transform-origin: 0% 0%;
   }
-  
+
   .menuToggle span:nth-last-child(2){
     transform-origin: 0% 100%;
   }
-  
+
   .menuToggle input:checked ~ span{
     opacity: 1;
     transform: translate(-280%,0) rotate(45deg) translate(-2px,1px);
     background: white;
   }
-  
+
   .menuToggle input:checked ~ span:nth-last-child(3){
     opacity: 0;
     transform: translate(-280%,0) rotate(0deg) scale(0.2,0.2);
   }
-  
+
   .menuToggle input:checked ~span:nth-last-child(2){
     transform: translate(-280%,0) rotate(-45deg) translate(0,-1px);
   }
-  
+
   .menuToggle input:checked{
     transform: translate(-280%,0);
   }
-  
+
   .topBarLinksMobile{
     position: absolute;
     padding-left: 0;
@@ -187,38 +187,38 @@
     transform: translate(+100%,0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   }
-  
+
   .topBarLinksMobile li{
     padding: 10px 0;
     padding-left: 30px;
     font-size: 18px;
   }
-  
+
   .link{
     background-color: #2E4052;
   }
-  
+
   .menuToggle input:checked ~ ul{
     transform: none;
   }
-  
+
   .topBarLinksMobile a{
     transition: color 0.5s ease;
   }
-  
+
   .topBarLinksMobile a:link, a:visited, a:active {
     text-decoration: none;
     color: white;
     font-family:Arial, Helvetica, sans-serif;
-  }  
-  
+  }
+
   .topBarLinksMobile a:hover{
     color: lightcoral;
   }
-  
+
   .AccederMobile{
     background-color: #03738C;
   }
-  
-  
+
+
 }

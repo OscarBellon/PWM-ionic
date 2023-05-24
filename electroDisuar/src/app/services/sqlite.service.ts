@@ -28,20 +28,18 @@ export class SqliteService {
         CREATE TABLE IF NOT EXISTS ${this.db_table}(
           user_id INTEGER PRIMARY KEY,
           producto blob,email varchar(255), np varchar(255))`,[])
-        .then((res)=>{alert(JSON.stringify(res));})
-        .catch((error)=> alert(JSON.stringify(error)));
+        .then((res)=>{})
       })
-      .catch((error)=> alert(JSON.stringify(error)))
     })
   }
   addProducto(producto: Producto,e:String){
 
     let productoString=JSON.stringify(producto)
-    alert(productoString);
     this.dbInstance.executeSql(`
       INSERT INTO ${this.db_table}(producto, email, np) VALUES ('${productoString}','${e}','${producto.nombre}')`,[])
       .then(()=>{
-        alert("success");
+
+        alert("Añadido a Favoritos");
       },(e)=>{ alert(JSON.stringify(e.err));})
   }
   getAllProductos(){
@@ -59,7 +57,6 @@ export class SqliteService {
   }
   deleteFav(producto: Producto){
     let productoString=JSON.stringify(producto);
-    alert(producto.nombre)
     this.dbInstance.executeSql(`
     DELETE FROM ${this.db_table} WHERE np='${producto.nombre}'`,[])
     .then(()=>{

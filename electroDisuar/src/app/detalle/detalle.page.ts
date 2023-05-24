@@ -11,7 +11,7 @@ import {SqliteService} from '../services/sqlite.service'
   styleUrls: ['./detalle.page.scss'],
 })
 export class DetallePage implements OnInit, OnChanges {
-  producto!: Producto
+  producto!: Producto;
   productosRelacionados: Producto[] = [];
   rutaImg!: string;
 
