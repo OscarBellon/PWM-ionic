@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { FavouritesPageRoutingModule } from './favourites-routing.module';
 
 import { FavouritesPage } from './favourites.page';
-
+import { CatalogoPageModule} from '../catalogo/catalogo.module'
+import {SqliteService} from '../services/sqlite.service'
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FavouritesPageRoutingModule
+    FavouritesPageRoutingModule,
+    CatalogoPageModule
   ],
   declarations: [FavouritesPage],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

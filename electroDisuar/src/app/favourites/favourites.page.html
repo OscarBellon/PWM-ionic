@@ -3,17 +3,18 @@
     <div class="titulo">
       <p>Perfil de Usuario</p>
     </div>
-  </header>  
+  </header>
   <main>
     <section class="informacion">
       <article class="subtitulo1">
         <p class="subtitulo1p">Favoritos del Usuario</p>
       </article>
       <article>
-        <!-- Carrusel!! --> 
-        <swiper-container slides-per-view="2" pagination="true" class="carrusel2">
-          <swiper-slide *ngFor="let producto of productosFavoritos" centered-slides="true">
+        <!-- Carrusel!! -->
+        <swiper-container slides-per-view="3" pagination="true" class="carrusel2">
+          <swiper-slide *ngFor="let producto of favs" centered-slides="true">
             <app-producto [producto]="producto"></app-producto>
+            <ion-button (click)="removeFav(producto)"><ion-icon name="trash-outline"></ion-icon></ion-button>
           </swiper-slide>
         </swiper-container>
       </article>

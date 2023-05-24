@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Producto } from '../producto'
 import {FirestoreService} from '../firestore.service'
 import {FireStorageService} from '../fire-storage.service'
+import {SqliteService} from '../services/sqlite.service'
+
 @Component({
   selector: 'app-detalle',
   templateUrl: './detalle.page.html',
@@ -26,7 +28,8 @@ export class DetallePage implements OnInit, OnChanges {
   constructor(private route: ActivatedRoute,
    private router: Router,
    private storage: FireStorageService,
-   private firestore: FirestoreService) {
+   private firestore: FirestoreService,
+   private sqlite: SqliteService) {
     this.route.queryParams.subscribe(params =>{
       this.producto = JSON.parse(params['special'])
       this.image();
@@ -40,6 +43,9 @@ export class DetallePage implements OnInit, OnChanges {
   }
   ngOnChanges(){
     this.image();
+  }
+  addFav(){
+    this.sqlite.addProducto(this.producto,"a")
   }
 
 }

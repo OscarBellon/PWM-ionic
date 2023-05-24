@@ -17,7 +17,7 @@ import { AngularFireStorageModule} from '@angular/fire/compat/storage'
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-
+import { SQLite, SQLiteObject } from '@awesome-cordova-plugins/sqlite/ngx';
 
 /*import { AngularFireModule } from '@angular/fire';*/
 //import { Auth } from '@angular/fire/compat/auth';
@@ -33,7 +33,7 @@ import { UserService } from './services/user.services';
     ReactiveFormsModule,
     FormsModule,
     AngularFireAuthModule,],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, UserService],
+  providers: [SQLite,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, UserService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
